@@ -85,7 +85,7 @@ FILES>>>
 
 
 def call_openai(prompt: str) -> str:
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = (os.getenv("OPENAI_API_KEY") or "").strip()
     if not api_key:
         raise RuntimeError("Missing OPENAI_API_KEY env var/secret.")
 
