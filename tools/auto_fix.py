@@ -20,6 +20,7 @@ def run(cmd: list[str], check=True, capture=True, text=True) -> subprocess.Compl
 def git(*args: str, check=True) -> subprocess.CompletedProcess:
     return run([ALLOWED_APPLY_TOOL, *args], check=check)
 
+
 def get_last_commit_message() -> str:
     return git("log", "-1", "--pretty=%B").stdout.strip()
 
