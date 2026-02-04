@@ -1,0 +1,56 @@
+name: Auto Fix (push to main)
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-fix-main
+  cancel-in-progress: false
+
+jobs:
+  autofix:
+    if: >
+      github.event.workflow_run.conclusion == 'failure' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout failing commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install openai
+
+      - name: Re-run tests to capture log
+        run: |
+          set -o pipefail
+          python -m pytest -q 2>&1 | tee pytest_fail.log
+        continue-on-error: true
+
+      - name: Run auto-fix
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+        run: |
+          python tools/auto_fix.py pytest_fail.log
+
+      - name: Push changes to main
+        run: |
+          git config user.name "auto-fix-bot"
+          git config user.email "auto-fix-bot@users.noreply.github.com"
+          git push origin HEAD:main
