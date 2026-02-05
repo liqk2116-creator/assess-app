@@ -21,9 +21,10 @@ jobs:
     steps:
       - name: Checkout failing commit
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.workflow_run.head_sha }}
-          fetch-depth: 0
+    with:
+      ref: main
+      fetch-depth: 0
+
 
       - name: Setup Python
         uses: actions/setup-python@v5
