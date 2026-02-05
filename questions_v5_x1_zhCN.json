@@ -1,0 +1,4016 @@
+{
+  "version": "v5-x1",
+  "language": "zh-CN",
+  "generated_at_utc": "2026-02-04T18:24:52Z",
+  "schema": {
+    "likert_scale": {
+      "min": 1,
+      "max": 5
+    },
+    "notes": [
+      "结构题反向计分：score = 6 - raw_score",
+      "权衡题/情境题选项顺序可前端随机打乱，但必须提交 option_id，后端按 option_id 映射计分",
+      "情境题 best_worst：best 用 effects_best，worst 用 effects_worst"
+    ]
+  },
+  "axes": [
+    {
+      "axis": "A",
+      "axis_name": "奖赏与动机",
+      "groups": [
+        {
+          "group_id": "A1",
+          "title": "结果更稳更愿意做",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "A1.1",
+              "prompt": "只要大概率能成，就算过程有点无聊我也愿意做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A1.2",
+              "prompt": "如果结果比较稳，我能忍受过程不那么好玩。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A1.3",
+              "prompt": "比如有人找我做一件事，只要结果更稳，我更愿意接。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A1.4",
+              "prompt": "就算结果不太稳，只要过程有意思我也愿意做。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A1",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "A1.5",
+              "prompt": "结果是否稳对我影响不大，我更看过程是不是有趣。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A1",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "A2",
+          "title": "被认可会更有劲",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "A2.1",
+              "prompt": "被厉害的人认可，会让我干劲明显上来。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A2.2",
+              "prompt": "别人肯定我一下，我会更愿意把事情做得更好。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A2.3",
+              "prompt": "比如被点名说“你来弄”，我会更来劲。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A2.4",
+              "prompt": "别人夸不夸我影响不大，我照样按自己的节奏做。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A2",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "A2.5",
+              "prompt": "就算没人认可我，我也不太受影响。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A2",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "A3",
+          "title": "喜欢把事情想明白",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "A3.1",
+              "prompt": "我喜欢把复杂事情想明白，那种感觉会让我很爽。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A3.2",
+              "prompt": "一旦看懂逻辑和规律，我会更想继续做下去。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A3.3",
+              "prompt": "遇到一堆零散信息时，我会忍不住想把它理顺。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A3.4",
+              "prompt": "想不想明白对我无所谓，我更愿意直接动手做。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A3",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "A3.5",
+              "prompt": "我不太在意把事情想透，差不多能做就行。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A3",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "A4",
+          "title": "喜欢做出看得见的成果",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "A4.1",
+              "prompt": "我喜欢把东西做出来，让别人一看就懂。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A4.2",
+              "prompt": "能做出一个看得见的结果，会让我很满足。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A4.3",
+              "prompt": "比如把要写的东西写出来、把任务交出去，我会很有成就感。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A4.4",
+              "prompt": "我不太在意有没有成果展示，只要过程顺就行。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A4",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "A4.5",
+              "prompt": "做不做出“看得见的东西”对我来说没那么重要。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A4",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "A5",
+          "title": "喜欢数据/收益变好",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "A5.1",
+              "prompt": "我看到数据/收益在变好，会更有劲。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A5.2",
+              "prompt": "能看到数据/收益提升，会让我更愿意投入。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A5.3",
+              "prompt": "比如最近数据/收益变好了，我会更想继续加把劲。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A5.4",
+              "prompt": "数据/收益变不变好对我影响不大，我更看重别的。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A5",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "A5.5",
+              "prompt": "就算数据/收益没变好，我也不会因此更没劲。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A5",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "A6",
+          "title": "重要的事能忍受无聊",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "A6.1",
+              "prompt": "如果一件事对我很重要，我能忍受过程不太好玩。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A6.2",
+              "prompt": "只要目标重要，过程枯燥我也能坚持。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A6.3",
+              "prompt": "比如为了通过某个检查/评审，我能扛住一段时间的枯燥。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A6.4",
+              "prompt": "只要过程无聊，我很难坚持下去，重要不重要都一样。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A6",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "A6.5",
+              "prompt": "过程不好玩我就不想做，哪怕这事很重要。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A6",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "A7",
+          "title": "更愿意做自己能掌握的事",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "A7.1",
+              "prompt": "我更愿意做我能掌握进度和结果的事。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A7",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A7.2",
+              "prompt": "事情在我能掌握的范围内，我会更安心更愿意做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A7",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A7.3",
+              "prompt": "比如规则清楚、怎么做我说了算，我会更愿意开始。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A7",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A7.4",
+              "prompt": "就算很多事情我掌握不了，我也能照做并不太在意。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A7",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "A7.5",
+              "prompt": "事情是否在我掌握范围内，对我影响不大。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A7",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "A8",
+          "title": "喜欢对别人有用",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "A8.1",
+              "prompt": "我更愿意做能帮到别人、对别人有用的事。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A8",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A8.2",
+              "prompt": "当我感觉自己在解决别人的问题时，会更有劲。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A8",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A8.3",
+              "prompt": "比如别人用了我的方法少走弯路，我会很满足。",
+              "reverse": false,
+              "measure": {
+                "group_id": "A8",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "A8.4",
+              "prompt": "我不太在意对别人有没有用，我更在意自己爽不爽。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A8",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "A8.5",
+              "prompt": "能不能帮到别人对我不重要，我更看自己喜不喜欢。",
+              "reverse": true,
+              "measure": {
+                "group_id": "A8",
+                "reverse": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis": "B",
+      "axis_name": "反馈偏好",
+      "groups": [
+        {
+          "group_id": "B1",
+          "title": "没回应会没劲",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "B1.1",
+              "prompt": "做事如果很久没人回应，我会明显没劲。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B1.2",
+              "prompt": "长时间没回信，我容易慢下来甚至停下来。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B1.3",
+              "prompt": "比如我发了消息两天没人回，我会很难继续推进。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B1.4",
+              "prompt": "就算没人回应，我也能照做并不太受影响。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B1",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "B1.5",
+              "prompt": "没人回我也无所谓，我照样推进。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B1",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "B2",
+          "title": "喜欢看到进展",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "B2.1",
+              "prompt": "我喜欢经常能看到“做到了多少”的感觉（清单/记录）。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B2.2",
+              "prompt": "看得到进展时，我更容易保持状态。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B2.3",
+              "prompt": "比如每天勾掉几项清单，我会更愿意继续做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B2.4",
+              "prompt": "看不看得到进展对我影响不大，我更看感觉。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B2",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "B2.5",
+              "prompt": "就算看不到进度，我也不会因此没劲。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B2",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "B3",
+          "title": "喜欢要求说清楚",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "B3.1",
+              "prompt": "我更喜欢一开始就说清楚：什么算做得好。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B3.2",
+              "prompt": "我希望标准明确，不希望含糊其辞。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B3.3",
+              "prompt": "比如开始前先说清楚“做到什么样算可以”，我会更顺。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B3.4",
+              "prompt": "标准清不清楚无所谓，我可以边做边猜。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B3",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "B3.5",
+              "prompt": "就算要求很模糊，我也不太在意。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B3",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "B4",
+          "title": "一句肯定很管用",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "B4.1",
+              "prompt": "别人一句“做得不错”对我影响很大。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B4.2",
+              "prompt": "有人肯定我，我会更想把事情做到更好。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B4.3",
+              "prompt": "比如被当面夸了一句，我会明显更愿意投入。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B4.4",
+              "prompt": "别人夸不夸我对我没啥影响。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B4",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "B4.5",
+              "prompt": "被表扬也不会让我更有劲。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B4",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "B5",
+          "title": "自己看见进展也行",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "B5.1",
+              "prompt": "只要我自己能看到进展，别人不夸我也行。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B5.2",
+              "prompt": "我更在意有没有实打实的进展，不太在意别人怎么说。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B5.3",
+              "prompt": "比如我自己知道在变好，我就能继续。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B5.4",
+              "prompt": "就算我自己看见进展，我也很需要别人来认可。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B5",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "B5.5",
+              "prompt": "没有外部肯定我就很难坚持，自己知道也不够。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B5",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "B6",
+          "title": "不太需要别人催（校验点）",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "B6.1",
+              "prompt": "我不太需要别人催，也能自己往前推。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B6.2",
+              "prompt": "没人盯着我，我也会照常把事做完。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B6.3",
+              "prompt": "比如没人提醒我，我也会按计划去做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "B6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "B6.4",
+              "prompt": "如果没人催我，我很容易就停下来。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B6",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "B6.5",
+              "prompt": "没有人提醒我，我基本很难坚持。",
+              "reverse": true,
+              "measure": {
+                "group_id": "B6",
+                "reverse": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis": "C",
+      "axis_name": "不确定性策略",
+      "groups": [
+        {
+          "group_id": "C1",
+          "title": "更愿意做把握更大的",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "C1.1",
+              "prompt": "我更愿意做规则清楚、成功机会大的事。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C1.2",
+              "prompt": "我更偏向选择把握更大的方向。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C1.3",
+              "prompt": "比如能算清楚大概能不能成的事，我更愿意先做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C1.4",
+              "prompt": "就算成功机会不大，我也愿意先冲一冲。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C1",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "C1.5",
+              "prompt": "赢面大小对我影响不大，我更看兴趣。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C1",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "C2",
+          "title": "先小试再加码",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "C2.1",
+              "prompt": "碰到不确定的事，我更喜欢先做个小尝试再决定要不要加码。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C2.2",
+              "prompt": "我更喜欢先试一小步，再看情况继续。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C2.3",
+              "prompt": "比如先试用/试做一小段，觉得行再继续。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C2.4",
+              "prompt": "我不太喜欢先小试，我更愿意一开始就投入到底。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C2",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "C2.5",
+              "prompt": "我更喜欢先定一个大方案直接做，不太想先试。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C2",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "C3",
+          "title": "喜欢新东西",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "C3.1",
+              "prompt": "有新鲜感的事情更容易让我来劲。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C3.2",
+              "prompt": "没做过的新东西会更容易让我想试试。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C3.3",
+              "prompt": "比如换一种新玩法/新路线，我会更想参与。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C3.4",
+              "prompt": "我不太喜欢新东西，我更喜欢熟悉的做法。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C3",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "C3.5",
+              "prompt": "新鲜感对我吸引力不大，我更喜欢稳定。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C3",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "C4",
+          "title": "说法老变会烦",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "C4.1",
+              "prompt": "说法老变、要求老变，会让我很烦。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C4.2",
+              "prompt": "不停改来改去，会让我动力下降。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C4.3",
+              "prompt": "比如一会儿这样一会儿那样，我会很难保持状态。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C4.4",
+              "prompt": "说法怎么变我都无所谓，我可以跟着改。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C4",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "C4.5",
+              "prompt": "需求反复变化对我影响不大。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C4",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "C5",
+          "title": "风险来更紧张",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "C5.1",
+              "prompt": "不确定和风险会让我焦虑多过兴奋。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C5.2",
+              "prompt": "风险变大时，我更容易想保守。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C5.3",
+              "prompt": "比如要承担明显风险时，我会更紧张。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C5.4",
+              "prompt": "风险越大我反而越兴奋，越想试试。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C5",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "C5.5",
+              "prompt": "不确定越多我越来劲，不太会紧张。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C5",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "C6",
+          "title": "更喜欢一步步改进",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "C6.1",
+              "prompt": "我更喜欢先做出一个能用的版本，再慢慢变好。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C6.2",
+              "prompt": "我更倾向稳扎稳打，不倾向一次押到底。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C6.3",
+              "prompt": "比如先把能用的东西做出来，再一点点完善。",
+              "reverse": false,
+              "measure": {
+                "group_id": "C6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "C6.4",
+              "prompt": "我更喜欢一次性把目标拉满，不太愿意慢慢改。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C6",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "C6.5",
+              "prompt": "我不太喜欢慢慢优化，我更愿意一把做完。",
+              "reverse": true,
+              "measure": {
+                "group_id": "C6",
+                "reverse": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis": "D",
+      "axis_name": "自主权与控制感",
+      "groups": [
+        {
+          "group_id": "D1",
+          "title": "只给目标我自己做",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "D1.1",
+              "prompt": "我更喜欢别人只说目标，让我自己决定怎么做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D1.2",
+              "prompt": "只要方向清楚，我更喜欢自己安排做法。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D1.3",
+              "prompt": "比如只告诉我“要达到什么”，我会更舒服。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D1.4",
+              "prompt": "我更喜欢别人把步骤也定好，我照着做更安心。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D1",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "D1.5",
+              "prompt": "没有明确步骤我会很难做，更喜欢有人带着。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D1",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "D2",
+          "title": "管太细会不爽",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "D2.1",
+              "prompt": "别人管得太细会让我很不爽。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D2.2",
+              "prompt": "别人一直指挥我怎么做，我会很烦。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D2.3",
+              "prompt": "比如我做事时一直被盯着细节，我会很不舒服。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D2.4",
+              "prompt": "别人管得细一点我更安心，反而更好做。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D2",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "D2.5",
+              "prompt": "有人盯细节会让我效率更高，我不太反感。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D2",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "D3",
+          "title": "先把要求说清楚更顺",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "D3.1",
+              "prompt": "开始前把要求说清楚，我做起来会更顺。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D3.2",
+              "prompt": "先把标准说清楚，我做起来会轻松很多。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D3.3",
+              "prompt": "比如先对齐“最后要长什么样”，我会更容易推进。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D3.4",
+              "prompt": "就算一开始没说清楚，我也能边做边摸索不受影响。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D3",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "D3.5",
+              "prompt": "要求不清也无所谓，我不太需要对齐就能做。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D3",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "D4",
+          "title": "临时加事会影响状态",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "D4.1",
+              "prompt": "临时加事、突然改要求，会让我状态变差。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D4.2",
+              "prompt": "突然插进来的事会打乱我，让我很烦。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D4.3",
+              "prompt": "比如做到一半被叫去做别的，我会很不爽。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D4.4",
+              "prompt": "临时加事对我没啥影响，我照样能快速切换。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D4",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "D4.5",
+              "prompt": "突然改要求我也不太在意，改就改。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D4",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "D5",
+          "title": "宁愿少改动慢一点",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "D5.1",
+              "prompt": "我宁愿推进慢些，也不想一直改来改去。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D5.2",
+              "prompt": "改动太多会让我很累，我更喜欢少改。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D5.3",
+              "prompt": "比如同一件事反复改很多次，我会很不愿意。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D5.4",
+              "prompt": "改来改去我也不太介意，能改到好就行。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D5",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "D5.5",
+              "prompt": "我更喜欢多试多改，越改越好我更开心。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D5",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "D6",
+          "title": "不喜欢被随时打断",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "D6.1",
+              "prompt": "被频繁打断会让我效率变差。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D6.2",
+              "prompt": "我更喜欢有一段不被打扰的时间。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D6.3",
+              "prompt": "比如我在专心做事时被反复叫去回话，我会很烦。",
+              "reverse": false,
+              "measure": {
+                "group_id": "D6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "D6.4",
+              "prompt": "被打断对我影响不大，我能随时接上。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D6",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "D6.5",
+              "prompt": "别人随时找我我也无所谓，不会影响我。",
+              "reverse": true,
+              "measure": {
+                "group_id": "D6",
+                "reverse": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis": "E",
+      "axis_name": "社交与关系倾向",
+      "groups": [
+        {
+          "group_id": "E1",
+          "title": "更喜欢自己干一块完整活",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "E1.1",
+              "prompt": "我更喜欢拿到一块任务自己做完再交出去。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E1.2",
+              "prompt": "我更喜欢负责一个完整结果，不喜欢碎片式配合。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E1.3",
+              "prompt": "比如让我自己把一件事从头到尾弄完，我会更舒服。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E1.4",
+              "prompt": "我更喜欢很多人一起分着做，自己只负责一小块。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E1",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "E1.5",
+              "prompt": "我不太喜欢独立扛一块，更喜欢一起推进。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E1",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "E2",
+          "title": "人多讨论会累",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "E2.1",
+              "prompt": "人太多一起讨论，会让我觉得累。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E2.2",
+              "prompt": "一堆人聊很久还没定下来，会让我消耗很大。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E2.3",
+              "prompt": "比如几个人一直聊来聊去没结论，我会很累。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E2.4",
+              "prompt": "人多讨论反而让我更有劲，我更喜欢热闹。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E2",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "E2.5",
+              "prompt": "多人讨论不会让我累，我还挺享受。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E2",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "E3",
+          "title": "更喜欢文字沟通",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "E3.1",
+              "prompt": "我更喜欢用文字把要点说清楚。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E3.2",
+              "prompt": "我更喜欢先发消息讲明白，再决定要不要当面聊。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E3.3",
+              "prompt": "比如先把要点写成几句话发出去，我会更舒服。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E3.4",
+              "prompt": "我不太喜欢写文字，我更喜欢当场说清楚。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E3",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "E3.5",
+              "prompt": "文字沟通让我累，我更喜欢口头沟通。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E3",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "E4",
+          "title": "希望信息齐一点",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "E4.1",
+              "prompt": "我更喜欢别人把背景、要求、时间说清楚。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E4.2",
+              "prompt": "信息不全会让我很难开始。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E4.3",
+              "prompt": "比如对方只说一句“帮我弄一下”，我会很难推进。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E4.4",
+              "prompt": "信息不全我也能做，边做边问就行。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E4",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "E4.5",
+              "prompt": "对方说得清不清楚我都无所谓。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E4",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "E5",
+          "title": "喜欢分工明确",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "E5.1",
+              "prompt": "分工不清会让我很烦。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E5.2",
+              "prompt": "我更喜欢每个人该做什么说清楚。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E5.3",
+              "prompt": "比如谁负责什么先讲明白，我会更安心。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E5.4",
+              "prompt": "分工不清也没关系，大家一起补就行。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E5",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "E5.5",
+              "prompt": "我不太在意分工清不清楚，能做就做。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E5",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "E6",
+          "title": "为人情做事很耗",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "E6.1",
+              "prompt": "需要顾及太多面子和情绪，会让我很累。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E6.2",
+              "prompt": "为了关系做很多额外事，会让我很耗。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E6.3",
+              "prompt": "比如为了不让人不高兴要解释很多，我会很消耗。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E6.4",
+              "prompt": "人情往来对我不算消耗，我还挺能应付。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E6",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "E6.5",
+              "prompt": "为了关系多花精力我也无所谓，不觉得累。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E6",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "E7",
+          "title": "更愿意把分歧说清楚",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "E7.1",
+              "prompt": "遇到分歧我更愿意把话说清楚。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E7",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E7.2",
+              "prompt": "我更喜欢把问题摊开讲明白。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E7",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E7.3",
+              "prompt": "比如意见不一样，我更愿意把理由说清楚。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E7",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E7.4",
+              "prompt": "遇到分歧我更愿意先憋着，别把气氛弄僵。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E7",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "E7.5",
+              "prompt": "我不太愿意把分歧说出来，能忍就忍。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E7",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "E8",
+          "title": "冲突时更想躲开",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "E8.1",
+              "prompt": "有矛盾时我更想回避。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E8",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E8.2",
+              "prompt": "我更不想正面冲突。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E8",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E8.3",
+              "prompt": "比如别人情绪上来时，我更想先躲开别争。",
+              "reverse": false,
+              "measure": {
+                "group_id": "E8",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "E8.4",
+              "prompt": "有矛盾我更愿意当场把话说清楚。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E8",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "E8.5",
+              "prompt": "冲突来了我也不怕，我更愿意正面解决。",
+              "reverse": true,
+              "measure": {
+                "group_id": "E8",
+                "reverse": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis": "F",
+      "axis_name": "压力与情绪反应",
+      "groups": [
+        {
+          "group_id": "F1",
+          "title": "很怕被看不起/出丑",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "F1.1",
+              "prompt": "当众出错会让我很难受。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F1.2",
+              "prompt": "被人看不起会让我特别受影响。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F1.3",
+              "prompt": "比如当着大家面被指出错误，我会很难受。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F1.4",
+              "prompt": "当众出错我也不太在意，很快就过去了。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F1",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "F1.5",
+              "prompt": "别人怎么看我影响不大，我不太会因为出丑难受。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F1",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "F2",
+          "title": "公开失败更难受",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "F2.1",
+              "prompt": "私下失败我能放下；公开失败我会反复想。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F2.2",
+              "prompt": "失败被很多人知道，会让我更难恢复。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F2.3",
+              "prompt": "比如我做砸了还被很多人看到，我会很久不舒服。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F2.4",
+              "prompt": "失败是不是公开的对我影响不大，我都能很快放下。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F2",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "F2.5",
+              "prompt": "就算公开失败，我也不会反复想太久。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F2",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "F3",
+          "title": "为了不丢脸会拖",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "F3.1",
+              "prompt": "怕做砸被人看见，会让我不太敢开始。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F3.2",
+              "prompt": "越担心丢脸，我越容易拖延。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F3.3",
+              "prompt": "比如要当众展示时，我更容易拖到最后一刻。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F3.4",
+              "prompt": "就算可能丢脸，我也会先开始再说。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F3",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "F3.5",
+              "prompt": "怕不怕丢脸不影响我行动，我该做就做。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F3",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "F4",
+          "title": "被否定影响劲头",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "F4.1",
+              "prompt": "别人一句否定，会让我一阵子提不起劲。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F4.2",
+              "prompt": "被否定后，我会更不想继续。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F4.3",
+              "prompt": "比如被当面说“不行”，我会明显受影响。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F4.4",
+              "prompt": "别人否定我也无所谓，我照样能做下去。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F4",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "F4.5",
+              "prompt": "被批评不会影响我动力，我很快就能继续。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F4",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "F5",
+          "title": "更怕事情失控",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "F5.1",
+              "prompt": "失去掌控感会让我很焦虑。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F5.2",
+              "prompt": "事情变得不可控时，我会很不舒服。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F5.3",
+              "prompt": "比如计划被打乱、变量太多，我会很难受。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F5.4",
+              "prompt": "事情不可控我也不太在意，顺其自然就好。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F5",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "F5.5",
+              "prompt": "失控不会让我难受太久，我能很快适应。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F5",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "F6",
+          "title": "先低调试试再拿出来",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "F6.1",
+              "prompt": "我更愿意先小范围尝试，再公开展示。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F6.2",
+              "prompt": "我更喜欢先在不显眼的地方试一试，稳了再拿出来。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F6.3",
+              "prompt": "比如先自己试几天没问题，再发给别人看。",
+              "reverse": false,
+              "measure": {
+                "group_id": "F6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "F6.4",
+              "prompt": "我更愿意一开始就公开做，边做边改。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F6",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "F6.5",
+              "prompt": "我不太喜欢先低调试，我更喜欢直接上。",
+              "reverse": true,
+              "measure": {
+                "group_id": "F6",
+                "reverse": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis": "G",
+      "axis_name": "能量与做事节奏",
+      "groups": [
+        {
+          "group_id": "G1",
+          "title": "更喜欢稳定推进",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "G1.1",
+              "prompt": "我更喜欢规律推进，不喜欢忽快忽慢。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G1.2",
+              "prompt": "我更喜欢持续做，而不是一口气做完再停。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G1.3",
+              "prompt": "比如每天做一点点，比拖到最后一次做完更适合我。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G1.4",
+              "prompt": "我更喜欢集中一阵子狠狠干完，再休息一阵。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G1",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "G1.5",
+              "prompt": "我不太喜欢天天做一点，更喜欢一口气搞定。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G1",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "G2",
+          "title": "更喜欢快点看到阶段结果",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "G2.1",
+              "prompt": "太久看不到结果会让我烦。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G2.2",
+              "prompt": "我更喜欢一段时间就能看到成果。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G2.3",
+              "prompt": "比如一两周都看不到变化，我会明显没耐心。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G2.4",
+              "prompt": "结果出来慢一点也无所谓，我能等。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G2",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "G2.5",
+              "prompt": "看不到阶段结果我也能一直做下去。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G2",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "G3",
+          "title": "更喜欢一次做一件重点",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "G3.1",
+              "prompt": "同时很多事会让我效率下降。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G3.2",
+              "prompt": "我更喜欢先把一件事搞定，再做下一件。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G3.3",
+              "prompt": "比如同时来好几件事，我更想先干完一件再说。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G3.4",
+              "prompt": "我更喜欢多件事一起推进，来回切换也没问题。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G3",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "G3.5",
+              "prompt": "同时做很多事反而更适合我，我不觉得难受。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G3",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "G4",
+          "title": "不喜欢被打断",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "G4.1",
+              "prompt": "被频繁打断会让我效率变差。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G4.2",
+              "prompt": "被打断多了，我会明显烦躁。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G4.3",
+              "prompt": "比如我在专心做事时被反复叫去回话，我会很烦。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G4.4",
+              "prompt": "被打断对我影响不大，我能随时接上。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G4",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "G4.5",
+              "prompt": "别人随时找我也无所谓，不会影响我。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G4",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "G5",
+          "title": "先做最重要部分",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "G5.1",
+              "prompt": "我更喜欢先抓重点，再完善。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G5.2",
+              "prompt": "我更喜欢先把最重要的部分做出来。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G5.3",
+              "prompt": "比如先把最关键那部分弄好，再慢慢补细节。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G5.4",
+              "prompt": "我更喜欢先把细节都弄好，再做大的部分。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G5",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "G5.5",
+              "prompt": "我不太喜欢先抓重点，我更喜欢先把细节做扎实。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G5",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "G6",
+          "title": "先开始再调整",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "G6.1",
+              "prompt": "我更喜欢先做出一个版本再优化。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G6.2",
+              "prompt": "我更愿意先开工，不愿意一直讨论。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G6.3",
+              "prompt": "比如先写个初稿发出去，再根据意见改。",
+              "reverse": false,
+              "measure": {
+                "group_id": "G6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "G6.4",
+              "prompt": "我更喜欢先讨论很久，把方案想清楚再开始。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G6",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "G6.5",
+              "prompt": "没想清楚之前我不太愿意动手开始。",
+              "reverse": true,
+              "measure": {
+                "group_id": "G6",
+                "reverse": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis": "H",
+      "axis_name": "意义来源",
+      "groups": [
+        {
+          "group_id": "H1",
+          "title": "值不值看能否帮到别人",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "H1.1",
+              "prompt": "我更愿意做对别人有用的事。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H1.2",
+              "prompt": "能帮到别人，会让我觉得很值。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H1.3",
+              "prompt": "比如别人因为我做的事省了时间，我会觉得很值。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H1",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H1.4",
+              "prompt": "对别人有用与否对我影响不大，我更看自己喜不喜欢。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H1",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "H1.5",
+              "prompt": "能不能帮到别人我不太在意。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H1",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "H2",
+          "title": "值不值看能否让我变强",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "H2.1",
+              "prompt": "能让我成长的事，我更愿意做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H2.2",
+              "prompt": "能让我学到新本事的事，我会更愿意投入。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H2.3",
+              "prompt": "比如能学会一个新技能，我会更愿意去做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H2",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H2.4",
+              "prompt": "能不能让我变强对我不重要，我更看当下舒服不舒服。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H2",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "H2.5",
+              "prompt": "我不太在意成长不成长，顺其自然就行。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H2",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "H3",
+          "title": "值不值看体验和表达",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "H3.1",
+              "prompt": "能表达自己、过程有感觉的事，我更愿意做。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H3.2",
+              "prompt": "我更愿意做让我觉得有意思的事。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H3.3",
+              "prompt": "比如做出来自己很喜欢、很顺眼的东西，我更愿意坚持。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H3",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H3.4",
+              "prompt": "过程有没有感觉我无所谓，我更看结果稳不稳。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H3",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "H3.5",
+              "prompt": "我不太在意表达和体验，能完成就行。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H3",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "H4",
+          "title": "值不值看规则清楚公不公平",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "H4.1",
+              "prompt": "规则明确、公平的环境更让我安心。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H4.2",
+              "prompt": "我更愿意在讲规则、讲公平的地方做事。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H4.3",
+              "prompt": "比如制度清楚、奖惩明白的环境，我会更愿意长期待。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H4",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H4.4",
+              "prompt": "规矩清不清楚对我无所谓，我更看人好不好相处。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H4",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "H4.5",
+              "prompt": "公平不公平对我影响不大，我不会太在意。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H4",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "H5",
+          "title": "赚钱但违背想法会排斥",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "H5.1",
+              "prompt": "如果让我违心，就算赚钱我也不舒服。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H5.2",
+              "prompt": "赚到钱但让我不认同的事，我会排斥。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H5.3",
+              "prompt": "比如要我说违心话来换钱，我会很难受。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H5",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H5.4",
+              "prompt": "只要能赚钱，违不违心我都能接受。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H5",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "H5.5",
+              "prompt": "钱更重要，我不太在意是不是违心。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H5",
+                "reverse": true
+              }
+            }
+          ]
+        },
+        {
+          "group_id": "H6",
+          "title": "符合想法即使短期少赚也愿意",
+          "type": "likert_1_5",
+          "pick_rule": "random_one",
+          "items": [
+            {
+              "item_id": "H6.1",
+              "prompt": "只要我觉得对，我愿意先投入，钱可以慢慢来。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H6.2",
+              "prompt": "我愿意为长期认可的方向先付出。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H6.3",
+              "prompt": "比如短期赚得少但我认同，我也愿意先做一段时间。",
+              "reverse": false,
+              "measure": {
+                "group_id": "H6",
+                "reverse": false
+              }
+            },
+            {
+              "item_id": "H6.4",
+              "prompt": "如果短期赚得少，我就不太愿意做，哪怕我认同。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H6",
+                "reverse": true
+              }
+            },
+            {
+              "item_id": "H6.5",
+              "prompt": "我更看短期回报，不太愿意为了长远先付出。",
+              "reverse": true,
+              "measure": {
+                "group_id": "H6",
+                "reverse": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forced_choice": [
+    {
+      "id": "X1",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "结果更稳/更确定",
+          "effects": [
+            {
+              "trait": "prefer_stable_result",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "更新更有趣/更有新鲜感",
+          "effects": [
+            {
+              "trait": "prefer_novelty",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X2",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "被认可/被选中",
+          "effects": [
+            {
+              "trait": "prefer_recognition",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "把事情想明白",
+          "effects": [
+            {
+              "trait": "prefer_understanding",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X3",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "数据/收益变好",
+          "effects": [
+            {
+              "trait": "prefer_data_gain",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "成果更拿得出手",
+          "effects": [
+            {
+              "trait": "prefer_visible_output",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X4",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "每天稳稳推进",
+          "effects": [
+            {
+              "trait": "prefer_steady_pace",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "集中狠狠干一阵",
+          "effects": [
+            {
+              "trait": "prefer_sprint",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X5",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "自己负责一块完整任务",
+          "effects": [
+            {
+              "trait": "prefer_ownership",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "大家一起配合推进",
+          "effects": [
+            {
+              "trait": "prefer_collaboration",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X6",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "先发消息把要点写清楚",
+          "effects": [
+            {
+              "trait": "prefer_text_first",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "当场聊清楚并定下来",
+          "effects": [
+            {
+              "trait": "prefer_talk_first",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X7",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "更怕当众出丑被轻视",
+          "effects": [
+            {
+              "trait": "fear_public_shame",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "更怕事情不受控制",
+          "effects": [
+            {
+              "trait": "fear_losing_control",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X8",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "更烦很久没回应",
+          "effects": [
+            {
+              "trait": "hate_no_response",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "更烦要到处求人协调",
+          "effects": [
+            {
+              "trait": "hate_coordination",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X9",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "先试一小步再加码",
+          "effects": [
+            {
+              "trait": "prefer_small_bet_first",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "先定大方向再全力做",
+          "effects": [
+            {
+              "trait": "prefer_big_commitment",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "X10",
+      "type": "forced_choice_2",
+      "pick_rule": "random_one",
+      "shuffle_options": true,
+      "prompt": "你更先选哪个？",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "规则清楚、变化少",
+          "effects": [
+            {
+              "trait": "prefer_rules_stable",
+              "delta": 1
+            }
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "更灵活、变化快",
+          "effects": [
+            {
+              "trait": "prefer_flexible_fast",
+              "delta": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "situational": [
+    {
+      "group_id": "SJT-1",
+      "title": "对方说得很含糊你怎么办",
+      "type": "best_worst_4",
+      "pick_rule": "random_one",
+      "ui_mode": "best_worst",
+      "constraints": {
+        "disallow_same_option": true
+      },
+      "items": [
+        {
+          "item_id": "SJT-1.1",
+          "prompt": "有人让你帮忙做一件事，只说“尽快弄好”，没有说清楚要弄成什么样。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item_id": "SJT-1.2",
+          "prompt": "你接到一个任务/请求，对方只说“帮我搞一下”，细节没说。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item_id": "SJT-1.3",
+          "prompt": "家里/朋友让你处理一件事，但只说“你看着办”，没给明确要求。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "SJT-2",
+      "title": "很久没人回你你怎么办",
+      "type": "best_worst_4",
+      "pick_rule": "random_one",
+      "ui_mode": "best_worst",
+      "constraints": {
+        "disallow_same_option": true
+      },
+      "items": [
+        {
+          "item_id": "SJT-2.1",
+          "prompt": "你发了消息问对方一件事，对方很久没回。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item_id": "SJT-2.2",
+          "prompt": "你把要交的东西发过去了，但对方一直没回应。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item_id": "SJT-2.3",
+          "prompt": "你在推进一件事，需要对方确认，但迟迟没回复。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "SJT-3",
+      "title": "对方反复改主意你怎么办",
+      "type": "best_worst_4",
+      "pick_rule": "random_one",
+      "ui_mode": "best_worst",
+      "constraints": {
+        "disallow_same_option": true
+      },
+      "items": [
+        {
+          "item_id": "SJT-3.1",
+          "prompt": "对方同一件事改了好几次说法，你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item_id": "SJT-3.2",
+          "prompt": "你按对方说的做了，结果对方又说“换个办法/换个样子”。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item_id": "SJT-3.3",
+          "prompt": "你已经做了一半，对方突然说“别这样了，改成另一个”。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "SJT-4",
+      "title": "需要别人配合但对方不积极",
+      "type": "best_worst_4",
+      "pick_rule": "random_one",
+      "ui_mode": "best_worst",
+      "constraints": {
+        "disallow_same_option": true
+      },
+      "items": [
+        {
+          "item_id": "SJT-4.1",
+          "prompt": "你需要别人配合一下才能继续，但对方态度不积极。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item_id": "SJT-4.2",
+          "prompt": "你要找人帮个忙，对方总是拖拖拉拉。你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item_id": "SJT-4.3",
+          "prompt": "一件事必须等别人给你信息/配合，你更像会怎么做？",
+          "shuffle_options": true,
+          "options": [
+            {
+              "option_id": "A",
+              "text": "先把问题问清楚：到底要什么、什么时候要、怎么才算可以",
+              "effects_best": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_clarify_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "B",
+              "text": "先做一个粗略版本发出去，让对方看了再说",
+              "effects_best": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_draft_first",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "C",
+              "text": "先等等，看对方会不会补充信息/自己先想想再动",
+              "effects_best": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_wait_for_info",
+                  "delta": -1
+                }
+              ]
+            },
+            {
+              "option_id": "D",
+              "text": "先把自己能做的先做完，剩下的再慢慢补",
+              "effects_best": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": 1
+                }
+              ],
+              "effects_worst": [
+                {
+                  "trait": "strategy_do_what_you_can",
+                  "delta": -1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

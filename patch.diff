@@ -1,0 +1,59 @@
+diff --git a/tools/auto_fix.py b/tools/auto_fix.py
+index 1111111..2222222 100644
+--- a/tools/auto_fix.py
++++ b/tools/auto_fix.py
+@@ -45,6 +45,7 @@ def git(*args: str, check=True) -> subprocess.CompletedProcess:
+     return run([ALLOWED_APPLY_TOOL, *args], check=check)
+ 
+ def get_last_commit_message() -> str:
+     return git("log", "-1", "--pretty=%B").stdout.strip()
+@@ -84,13 +85,18 @@ def build_prompt(pytest_log: str, files: list[Path]) -> str:
+ 
+     return f"""You are an expert engineer.
+ Goal: fix the failing tests.
+ 
+ Rules:
+-- Output ONLY a unified diff patch (git apply compatible). No explanations.
++- You MUST output ONLY a unified diff patch that is compatible with `git apply`.
++- Start the output with: diff --git
++- Do not wrap in markdown. No ``` fences. No commentary.
++- If you cannot produce a valid diff, output a minimal diff that adds a TODO comment in the most relevant file (still as a diff).
+ - Do NOT modify any paths under: {FORBIDDEN_PREFIXES}
+ - Keep changes minimal.
+ - Do not delete tests to make them pass; fix code properly.
+ - If you need to add files, include them in the diff.
+ 
+ Pytest failure log:
+ <<<LOG
+ {pytest_log}
+ LOG>>>
+@@ -106,7 +112,7 @@ def call_openai(prompt: str) -> str:
+     api_key = (os.getenv("OPENAI_API_KEY") or "").strip()
+     if not api_key:
+         raise RuntimeError("Missing OPENAI_API_KEY env var/secret.")
+ 
+     model = os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
+ 
+     # Use official OpenAI python package. Compatible with recent versions.
+     from openai import OpenAI  # type: ignore
+     client = OpenAI(api_key=api_key)
+ 
+-    resp = client.responses.create(
+-        model=model,
+-        input=prompt,
+-    )
+-    text = resp.output_text
+-    return text.strip()
++    resp = client.responses.create(
++        model=model,
++        input=[
++            {"role": "system", "content": "Return ONLY a git apply compatible unified diff. No other text."},
++            {"role": "user", "content": prompt},
++        ],
++    )
++    text = (resp.output_text or "").strip()
++    # Fallback: if the model included extra text, try to slice from the first diff header.
++    i = text.find("diff --git")
++    if i != -1:
++        text = text[i:].strip()
++    return text
